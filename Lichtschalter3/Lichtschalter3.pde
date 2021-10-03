@@ -1,7 +1,7 @@
 PImage imgAn;    // Variable, in der das An-Bild gespeichert wird
 PImage imgAus;   // Variable, in der das Aus-Bild gespeichert wird
 
-boolean licht;
+boolean lichtIstAn;
 
 
 void setup()
@@ -11,12 +11,12 @@ void setup()
   imgAn = loadImage("lampeAn.png");  // Das Bild "lampeAn.png" wird geladen
   imgAus = loadImage("lampeAus.png"); // Das Bild "lampeAus.png" wird geladen
   textSize(20);
-  licht = false;
+  lichtIstAn = false;
 }
 
 void draw()
 {
-  if(licht) {
+  if(lichtIstAn) {
   image(imgAn,100,70,100,150); // imgAus wird  angezeigt
   }
   else
@@ -46,7 +46,7 @@ void draw()
 void mousePressed() {
   if (mouseX > 50 && mouseX < 250 && mouseY > 300 && mouseY < 350)
   {
-    licht = !licht;
+    lichtIstAn = !lichtIstAn;
   }
 }
 
